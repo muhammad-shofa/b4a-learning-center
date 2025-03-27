@@ -11,13 +11,13 @@ import anywheresoftware.b4a.pc.Debug;
 import anywheresoftware.b4a.pc.B4XTypes.B4XClass;
 import anywheresoftware.b4a.pc.B4XTypes.DeviceClass;
 
-public class main implements IRemote{
-	public static main mostCurrent;
+public class about implements IRemote{
+	public static about mostCurrent;
 	public static RemoteObject processBA;
     public static boolean processGlobalsRun;
     public static RemoteObject myClass;
     public static RemoteObject remoteMe;
-	public main() {
+	public about() {
 		mostCurrent = this;
 	}
     public RemoteObject getRemoteMe() {
@@ -30,7 +30,7 @@ public class main implements IRemote{
 
 	}
     static {
-        anywheresoftware.b4a.pc.RapidSub.moduleToObject.put(new B4XClass("main"), "b4a.example.main");
+        anywheresoftware.b4a.pc.RapidSub.moduleToObject.put(new B4XClass("about"), "b4a.example.about");
 	}
 
 public boolean isSingleton() {
@@ -50,20 +50,17 @@ public boolean isSingleton() {
 		_activity = (RemoteObject) args[3];
         anywheresoftware.b4a.keywords.Common.Density = (Float)args[4];
         remoteMe = (RemoteObject) args[5];
-		pcBA = new PCBA(this, main.class);
+		pcBA = new PCBA(this, about.class);
         main_subs_0.initializeProcessGlobals();
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
-public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
-public static RemoteObject _lblheader1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
-public static RemoteObject _lbldate1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
-public static RemoteObject _checkbox1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
-public static RemoteObject _btntohome1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _lblabout1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _btntoabout1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _btntohome1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.about _about = null;
   public Object[] GetGlobals() {
-		return new Object[] {"About",Debug.moduleToString(b4a.example.about.class),"Activity",main.mostCurrent._activity,"BtnToAbout1",main.mostCurrent._btntoabout1,"BtnToHome1",main.mostCurrent._btntohome1,"CheckBox1",main.mostCurrent._checkbox1,"LblDate1",main.mostCurrent._lbldate1,"LblHeader1",main.mostCurrent._lblheader1,"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
+		return new Object[] {"Activity",about.mostCurrent._activity,"BtnToAbout1",about.mostCurrent._btntoabout1,"BtnToHome1",about.mostCurrent._btntohome1,"LblAbout1",about.mostCurrent._lblabout1,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
 }
 }

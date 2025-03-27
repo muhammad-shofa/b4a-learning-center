@@ -39,5 +39,13 @@
 			android:name=".starter$starter_BR"
 			android:exported="true">
 		</receiver>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".about"
+			android:label="Explore B4A"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
 	</application>
 </manifest>
