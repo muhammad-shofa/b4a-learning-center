@@ -54,27 +54,27 @@ starter,service_taskremoved,0,0,22,24
 
 
 
-about,activity_create,1,0,21,23
-,btntoabout1,,btntohome1,,lblabout1
-,btntoabout1,,btntohome1,,lblabout1
+about,activity_create,1,1,23,45
+,btntoabout1,,btntohome1,,edittext1,,hz_scrollview1,,lblabout1
+,btntoabout1,,btntohome1,,edittext1,,hz_scrollview1,,lblabout1
 
-about,activity_pause,0,0,29,31
-
-
-
-about,activity_resume,0,0,25,27
+about,activity_pause,0,0,51,53
 
 
 
-about,btntoabout1_click,0,0,37,39
+about,activity_resume,0,0,47,49
 
 
 
-about,btntohome1_click,0,0,33,35
+about,btntoabout1_click,0,0,59,61
 
 
 
-about,globals,0,1,12,19
+about,btntohome1_click,0,0,55,57
+
+
+
+about,globals,0,1,12,21
 
 
 

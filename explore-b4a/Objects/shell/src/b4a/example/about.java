@@ -58,9 +58,11 @@ public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.
 public static RemoteObject _lblabout1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _btntoabout1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _btntohome1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _edittext1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _hz_scrollview1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.HorizontalScrollViewWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",about.mostCurrent._activity,"BtnToAbout1",about.mostCurrent._btntoabout1,"BtnToHome1",about.mostCurrent._btntohome1,"LblAbout1",about.mostCurrent._lblabout1,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"Activity",about.mostCurrent._activity,"BtnToAbout1",about.mostCurrent._btntoabout1,"BtnToHome1",about.mostCurrent._btntohome1,"EditText1",about.mostCurrent._edittext1,"HZ_ScrollView1",about.mostCurrent._hz_scrollview1,"LblAbout1",about.mostCurrent._lblabout1,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class)};
 }
 }

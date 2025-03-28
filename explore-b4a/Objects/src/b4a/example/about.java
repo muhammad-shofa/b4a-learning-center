@@ -348,63 +348,107 @@ public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lblabout1 = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btntoabout1 = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btntohome1 = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _edittext1 = null;
+public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _hz_scrollview1 = null;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="about";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="Activity.LoadLayout(\"AboutUI\")";
+anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
+int _i = 0;
+anywheresoftware.b4a.objects.LabelWrapper _lblcontenthsv = null;
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=983041;
+ //BA.debugLineNum = 983041;BA.debugLine="Activity.LoadLayout(\"AboutUI\")";
 mostCurrent._activity.LoadLayout("AboutUI",mostCurrent.activityBA);
-RDebugUtils.currentLine=917506;
- //BA.debugLineNum = 917506;BA.debugLine="End Sub";
+RDebugUtils.currentLine=983044;
+ //BA.debugLineNum = 983044;BA.debugLine="Dim Panel1 As Panel";
+_panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
+RDebugUtils.currentLine=983045;
+ //BA.debugLineNum = 983045;BA.debugLine="Panel1.Initialize(\"\")";
+_panel1.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=983046;
+ //BA.debugLineNum = 983046;BA.debugLine="HZ_ScrollView1.Panel.AddView(Panel1, 0, 0, 600dip";
+mostCurrent._hz_scrollview1.getPanel().AddView((android.view.View)(_panel1.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (600)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
+RDebugUtils.currentLine=983049;
+ //BA.debugLineNum = 983049;BA.debugLine="For i = 0 To 4";
+{
+final int step5 = 1;
+final int limit5 = (int) (4);
+_i = (int) (0) ;
+for (;_i <= limit5 ;_i = _i + step5 ) {
+RDebugUtils.currentLine=983050;
+ //BA.debugLineNum = 983050;BA.debugLine="Dim LblContentHSV As Label";
+_lblcontenthsv = new anywheresoftware.b4a.objects.LabelWrapper();
+RDebugUtils.currentLine=983051;
+ //BA.debugLineNum = 983051;BA.debugLine="LblContentHSV.Initialize(\"\")";
+_lblcontenthsv.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=983052;
+ //BA.debugLineNum = 983052;BA.debugLine="LblContentHSV.Text = \"Halo\" & (i + 1)";
+_lblcontenthsv.setText(BA.ObjectToCharSequence("Halo"+BA.NumberToString((_i+1))));
+RDebugUtils.currentLine=983053;
+ //BA.debugLineNum = 983053;BA.debugLine="LblContentHSV.TextColor = Colors.Black";
+_lblcontenthsv.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=983056;
+ //BA.debugLineNum = 983056;BA.debugLine="Panel1.AddView(LblContentHSV, i * 100dip, 0, 100";
+_panel1.AddView((android.view.View)(_lblcontenthsv.getObject()),(int) (_i*anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100))),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
+ }
+};
+RDebugUtils.currentLine=983060;
+ //BA.debugLineNum = 983060;BA.debugLine="HZ_ScrollView1.Panel.Width = 600dip";
+mostCurrent._hz_scrollview1.getPanel().setWidth(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (600)));
+RDebugUtils.currentLine=983061;
+ //BA.debugLineNum = 983061;BA.debugLine="HZ_ScrollView1.Panel.Height = 100dip";
+mostCurrent._hz_scrollview1.getPanel().setHeight(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
+RDebugUtils.currentLine=983062;
+ //BA.debugLineNum = 983062;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="about";
-RDebugUtils.currentLine=1048576;
- //BA.debugLineNum = 1048576;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1048578;
- //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="about";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=983040;
- //BA.debugLineNum = 983040;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=983042;
- //BA.debugLineNum = 983042;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btntoabout1_click() throws Exception{
 RDebugUtils.currentModule="about";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btntoabout1_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btntoabout1_click", null));}
-RDebugUtils.currentLine=4915200;
- //BA.debugLineNum = 4915200;BA.debugLine="Sub BtnToAbout1_Click";
-RDebugUtils.currentLine=4915201;
- //BA.debugLineNum = 4915201;BA.debugLine="StartActivity(\"About\")";
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Sub BtnToAbout1_Click";
+RDebugUtils.currentLine=1245185;
+ //BA.debugLineNum = 1245185;BA.debugLine="StartActivity(\"About\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("About"));
-RDebugUtils.currentLine=4915202;
- //BA.debugLineNum = 4915202;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btntohome1_click() throws Exception{
 RDebugUtils.currentModule="about";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btntohome1_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btntohome1_click", null));}
-RDebugUtils.currentLine=4194304;
- //BA.debugLineNum = 4194304;BA.debugLine="Sub BtnToHome1_Click";
-RDebugUtils.currentLine=4194305;
- //BA.debugLineNum = 4194305;BA.debugLine="StartActivity(\"Main\")";
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Sub BtnToHome1_Click";
+RDebugUtils.currentLine=1179649;
+ //BA.debugLineNum = 1179649;BA.debugLine="StartActivity(\"Main\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("Main"));
-RDebugUtils.currentLine=4194306;
- //BA.debugLineNum = 4194306;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="End Sub";
 return "";
 }
 }
