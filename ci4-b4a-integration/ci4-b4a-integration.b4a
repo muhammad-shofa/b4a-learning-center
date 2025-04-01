@@ -3,13 +3,15 @@ File1=Layout.bal
 FileGroup1=Default Group
 Group=Default Group
 Library1=core
-Library2=xui
+Library2=okhttputils2
+Library3=xui
+Library4=json
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=Starter
 NumberOfFiles=1
-NumberOfLibraries=2
+NumberOfLibraries=4
 NumberOfModules=1
-Version=9.9
+Version=13.1
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: B4A Example
@@ -37,6 +39,27 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layout")
+	Log("Anjayyyyyyyy")
+	Dim Job As HttpJob
+	Job.Initialize("getUserData", Me)
+	Job.Download("http://192.168.1.4:8080/api/getUser")
+End Sub
+
+Sub JobDone(Job As HttpJob)
+	If Job.Success Then
+		Dim parser As JSONParser
+		parser.initialize(Job.GetString)
+		Dim data As List = parser.NextArray
+		
+		For Each item As Map In data
+			Log("Name : " & item.Get("name"))
+			Log("Username : " & item.Get("username"))
+			Log("Email :" & item.Get("email"))
+		Next
+	Else
+		Log("Error + " & Job.ErrorMessage)
+	End If
+	Job.Release
 End Sub
 
 Sub Activity_Resume
